@@ -37,7 +37,7 @@ export default function Slider() {
                                     <div className="banner-content text-center">
                                         <h2 className="title" data-animation="fadeInUp" data-delay=".2s">Crafting Beautiful Interiors</h2>
                                         <p data-animation="fadeInUp" data-delay=".4s">Transforming residential spaces with bespoke interiors, refined craftsmanship, and carefully considered architectural excellence.</p>
-                                        <Link href="overview" className="btn" data-animation="fadeInUp" data-delay=".6s">
+                                        <Link href="/realestate" className="btn" data-animation="fadeInUp" data-delay=".6s">
                                             <div className="btn_m">
                                                 <div className="btn_c">
                                                     <div className="btn_t1">learn more</div>
@@ -57,7 +57,7 @@ export default function Slider() {
                                     <div className="banner-content text-center">
                                         <h2 className="title" data-animation="fadeInUp" data-delay=".2s">Premium Coworking Spaces</h2>
                                         <p data-animation="fadeInUp" data-delay=".4s">Premium workspaces crafted to elevate your business presence while inspiring growth, creativity, and success.</p>
-                                        <Link href="overview" className="btn" data-animation="fadeInUp" data-delay=".6s">
+                                        <Link href="/coworking" className="btn" data-animation="fadeInUp" data-delay=".6s">
                                             <div className="btn_m">
                                                 <div className="btn_c">
                                                     <div className="btn_t1">learn more</div>

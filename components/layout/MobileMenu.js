@@ -37,7 +37,7 @@ export default function MobileMenu() {
                     <div className={isActive.key == 1 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(1)}><span className="fas fa-angle-down" /></div>
 
                 </li>
-                <li className={isActive.key == 2 ? "menu-item-has-children active" : "menu-item-has-children"}><Link href="#">About</Link>
+                <li className={isActive.key == 2 ? "menu-item-has-children active" : "menu-item-has-children"}><Link href="/#about">About</Link>
                     <ul className="sub-menu" style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
                         <li><Link href="/overview">Overview</Link></li>
                         <li><Link href="/mission">Mission</Link></li>
@@ -66,7 +66,8 @@ export default function MobileMenu() {
                 </li>
                 <li className={isActive.key == 5 ? "menu-item-has-children active" : "menu-item-has-children"}><Link href="#">Pages</Link>
                     <ul className="sub-menu" style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
-                        <li><Link href="/sirvices">Services</Link></li>
+                        <li><Link href="/realestate">Services</Link></li>
+                        <li><Link href="/coworking">Coworking Spaces</Link></li>
                         <li><Link href="/testimonial">Testimonials</Link></li>
                         <li><Link href="/faq">Faq</Link></li>
                         <li><Link href="/404">404 Error</Link></li>

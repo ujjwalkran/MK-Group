@@ -33,7 +33,7 @@ export default function Footer() {
                             <ul>
                                 <li><Link href="/">Home</Link></li>
                                 <li><Link href="/overview">About us</Link></li>
-                                <li><Link href="/sirvices">Services</Link></li>
+                                <li><Link href="/realestate">Services</Link></li>
                                 <li><Link href="/project">Projects</Link></li>
                                 <li><Link href="/contact">Contact</Link></li>
                             </ul>
@@ -43,7 +43,7 @@ export default function Footer() {
                             <h2>Services</h2>
                             <ul>
                                 {services.map((service) => (
-                                    <li key={service}><Link href="/sirvices">{service}</Link></li>
+                                    <li key={service}>{service}</li>
                                 ))}
                             </ul>
                         </nav>

@@ -76,7 +76,7 @@ export default function VerticalMenu({ isShow }) {
                 <li className={`${isActive.key == 5 ? "menu-item-has-children active" : "menu-item-has-children"} ${isShow && "is-show"}`} onClick={() => handleToggle(5)}>
                     <Link href="#">Pages</Link>
                     <ul className="sub-menu" style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
-                        <li><Link href="/sirvices">Services</Link></li>
+                        <li><Link href="/realestate">Services</Link></li>
                         <li><Link href="/testimonial">Testimonials</Link></li>
                         <li><Link href="/faq">Faq</Link></li>
                         <li><Link href="/404">404 Error</Link></li>

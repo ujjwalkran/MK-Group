@@ -29,28 +29,12 @@ export default function Menu({ isShow }) {
 
             <ul className="navigation">
                 <li className="menu-item-has-children">
-                    <Link href="#">Home</Link>
+                    <Link href="/">Home</Link>
 
 
                 </li>
                 <li className="menu-item-has-children">
-                    <Link href="#">About</Link>
-                    <ul className="sub-menu" >
-                        <li><Link href="/overview">Overview</Link></li>
-                        <li><Link href="/mission">Mission</Link></li>
-                        <li><Link href="/team">Our Team</Link></li>
-                        <li><Link href="/team-details">Team Profile</Link></li>
-                    </ul>
-
-                </li>
-                <li className="menu-item-has-children">
-                    <Link href="#">Projects</Link>
-                    <ul className="sub-menu" >
-                        <li><Link href="/project">Projects Two Col</Link></li>
-                        <li><Link href="/project-two">Projects Three Col</Link></li>
-                        <li><Link href="/project-three">Projects Four Col</Link></li>
-                        <li><Link href="/project/1">Projects Single</Link></li>
-                    </ul>
+                    <Link href="/#about">About</Link>
 
                 </li>
                 {/* <li className="menu-item-has-children">
@@ -66,10 +50,8 @@ export default function Menu({ isShow }) {
                 <li className="menu-item-has-children">
                     <Link href="#">Pages</Link>
                     <ul className="sub-menu" >
-                        <li><Link href="/sirvices">Services</Link></li>
-                        <li><Link href="/testimonial">Testimonials</Link></li>
-                        <li><Link href="/faq">Faq</Link></li>
-                        <li><Link href="/404">404 Error</Link></li>
+                        <li><Link href="/realestate">Real Estate</Link></li>
+                        <li><Link href="/coworking">Coworking Spaces</Link></li>
                     </ul>
 
                 </li>

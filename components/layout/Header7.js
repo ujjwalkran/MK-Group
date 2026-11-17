@@ -79,7 +79,7 @@ export default function Header7({ handleMobileMenu, scroll }) {
                                                 </li>
                                                 <li className="menu-item-has-children"><Link href="#">Pages</Link>
                                                     <ul className="sub-menu">
-                                                        <li><Link href="sirvices">Services</Link></li>
+                                                        <li><Link href="/realestate">Services</Link></li>
                                                         <li><Link href="testimonial">Testimonials</Link></li>
                                                         <li><Link href="faq">Faq</Link></li>
                                                         <li><Link href="error">404 Error</Link></li>

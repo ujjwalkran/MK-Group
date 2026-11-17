@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import BackToTop from '../elements/BackToTop'
 import Breadcrumb from './Breadcrumb'
 import Footer from './Footer'
@@ -24,10 +24,13 @@ export default function Layout({ headerStyle, headTitle, breadcrumbTitle, childr
 
     // Mobile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
-    const handleMobileMenu = () => {
-        setMobileMenu(!isMobileMenu)
-        !isMobileMenu ? document.body.classList.add("mobile-menu-visible") : document.body.classList.remove("mobile-menu-visible")
-    }
+    const handleMobileMenu = useCallback(() => setMobileMenu((open) => !open), [])
+    const closeMobileMenu = useCallback(() => setMobileMenu(false), [])
+
+    useEffect(() => {
+        document.body.classList.toggle("mobile-menu-visible", isMobileMenu)
+        return () => document.body.classList.remove("mobile-menu-visible")
+    }, [isMobileMenu])
 
     // Scroll Header
     const [scroll, setScroll] = useState(0)
@@ -48,7 +51,14 @@ export default function Layout({ headerStyle, headTitle, breadcrumbTitle, childr
             {headerStyle == 3 ? <Header3 scroll={scroll} handleMobileMenu={handleMobileMenu} /> : null}
             {headerStyle == 4 ? <Header4 /> : null}
             {headerStyle == 5 ? <Header5 scroll={scroll} handleMobileMenu={handleMobileMenu} /> : null}
-            {headerStyle == 6 ? <Header6 scroll={scroll} handleMobileMenu={handleMobileMenu} /> : null}
+            {headerStyle == 6 ? (
+                <Header6
+                    closeMobileMenu={closeMobileMenu}
+                    handleMobileMenu={handleMobileMenu}
+                    isMobileMenu={isMobileMenu}
+                    scroll={scroll}
+                />
+            ) : null}
             {headerStyle == 7 ? <Header7 scroll={scroll} handleMobileMenu={handleMobileMenu} /> : null}
             {headerStyle == 8 ? <Header8 /> : null}
 
