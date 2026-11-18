@@ -15,7 +15,18 @@ export default function Contact() {
     }
 
     return (
-        <Layout headerStyle={6} heroHeader lightHeroHeader>
+        <Layout
+            headerStyle={6}
+            headTitle="Contact MK Groups | Bengaluru Real Estate & Coworking"
+            seoDescription="Contact MK Groups in Bengaluru for real estate, construction, interior design, commercial property, and coworking enquiries. Call +91 81479 03884."
+            canonicalPath="/contact"
+            ogTitle="Contact MK Groups in Bengaluru"
+            ogDescription="Speak with MK Groups about real estate, construction, interiors, commercial property, and coworking spaces in Bengaluru."
+            ogImage="/assets/img/banner/commercial-real-estate-services-bengaluru.jpg"
+            ogImageAlt="MK Groups commercial property and real estate services in Bengaluru"
+            heroHeader
+            lightHeroHeader
+        >
             <section className="mk-contact-hero">
                 <div className="container">
                     <nav className="mk-contact-breadcrumb" aria-label="Breadcrumb">
@@ -28,7 +39,7 @@ export default function Contact() {
                         <div className="mk-contact-intro wow fadeInUp">
                             <span className="mk-contact-eyebrow">
                                 <span aria-hidden="true" />
-                                Contact MK Group
+                                Contact MK Groups
                             </span>
                             <h1>Let’s find the right space for your next move.</h1>
                             <p className="mk-contact-lead">

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useRef } from "react"
 import LuxuryMenu from "./LuxuryMenu"
 import LuxuryMobileMenu from "./LuxuryMobileMenu"
@@ -54,7 +55,14 @@ export default function Header6({ handleMobileMenu, closeMobileMenu, isMobileMen
                         <nav className="menu-nav mk-header-nav" aria-label="Main navigation">
                             <div className="logo">
                                 <Link href="/" aria-label="MK Groups home">
-                                    <img src="/assets/img/logo/logo.png" alt="MK Groups" />
+                                    <Image
+                                        src="/assets/img/logo/logo.png"
+                                        alt="MK Groups"
+                                        width={4500}
+                                        height={4500}
+                                        sizes="(max-width: 1199px) 88px, 112px"
+                                        priority
+                                    />
                                 </Link>
                             </div>
                             <div className="navbar-wrap main-menu mk-desktop-nav">
@@ -101,7 +109,13 @@ export default function Header6({ handleMobileMenu, closeMobileMenu, isMobileMen
                 <nav aria-label="Mobile menu" className="menu-box mk-mobile-panel">
                     <div className="mk-mobile-menu-header">
                         <Link href="/" aria-label="MK Groups home" onClick={closeMenu}>
-                            <img src="/assets/img/logo/logo.png" alt="MK Groups" />
+                            <Image
+                                src="/assets/img/logo/logo.png"
+                                alt="MK Groups"
+                                width={4500}
+                                height={4500}
+                                sizes="72px"
+                            />
                         </Link>
                         <button
                             aria-label="Close navigation menu"

@@ -1,10 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const services = [
-    "Commercial Real Estate",
-    "Coworking Spaces",
-    "Investment Advisory",
-    "Property Management",
+    { title: "Real Estate & Construction", href: "/realestate" },
+    { title: "Interior Design", href: "/realestate#services" },
+    { title: "Coworking Spaces", href: "/coworking" },
+    { title: "Contact our team", href: "/contact" },
 ]
 
 export default function Footer() {
@@ -15,7 +16,13 @@ export default function Footer() {
                     <div className="mk-footer-grid">
                         <div className="mk-footer-brand">
                             <Link href="/" className="mk-footer-logo">
-                                <img src="/assets/img/logo/logo.png" alt="MK Group" />
+                                <Image
+                                    src="/assets/img/logo/logo.png"
+                                    alt="MK Groups"
+                                    width={4500}
+                                    height={4500}
+                                    sizes="100px"
+                                />
                             </Link>
                             <p>
                                 Premium real estate and flexible workspaces, thoughtfully brought together to help
@@ -32,8 +39,9 @@ export default function Footer() {
                             <h2>Quick links</h2>
                             <ul>
                                 <li><Link href="/">Home</Link></li>
-                                <li><Link href="/overview">About us</Link></li>
-                                <li><Link href="/realestate">Services</Link></li>
+                                <li><Link href="/#about">About us</Link></li>
+                                <li><Link href="/realestate">Real Estate</Link></li>
+                                <li><Link href="/coworking">Coworking</Link></li>
                                 <li><Link href="/project">Projects</Link></li>
                                 <li><Link href="/contact">Contact</Link></li>
                             </ul>
@@ -43,7 +51,7 @@ export default function Footer() {
                             <h2>Services</h2>
                             <ul>
                                 {services.map((service) => (
-                                    <li key={service}>{service}</li>
+                                    <li key={service.href}><Link href={service.href}>{service.title}</Link></li>
                                 ))}
                             </ul>
                         </nav>
@@ -66,7 +74,7 @@ export default function Footer() {
                     </div>
 
                     <div className="mk-footer-bottom">
-                        <p>© {new Date().getFullYear()} MK Group. All rights reserved.</p>
+                        <p>© {new Date().getFullYear()} MK Groups. All rights reserved.</p>
                         <div className="mk-footer-legal">
                             <span>Privacy Policy</span>
                             <span>Terms of Service</span>

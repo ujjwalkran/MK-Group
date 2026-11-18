@@ -21,18 +21,17 @@ function MyApp({ Component, pageProps }) {
 
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             setLoading(false)
-        }, 1000)
-
+        }, 250)
+        return () => clearTimeout(timer)
     }, [])
-    return (<>
-        {!loading ? (
+    return (
+        <>
             <Component {...pageProps} />
-        ) : (
-            <Preloader />
-        )}
-    </>)
+            {loading && <Preloader />}
+        </>
+    )
 }
 
 export default MyApp

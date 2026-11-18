@@ -30,7 +30,7 @@ export default function Slider() {
         <>
             <section className="slider-area">
                 <Swiper {...swiperOptions} className="slider-active">
-                    <SwiperSlide className="single-slider slider-bg" style={{ backgroundImage: `url("/assets/img/banner/home_interior.png")` }}>
+                    <SwiperSlide className="single-slider slider-bg" style={{ backgroundImage: `url("/assets/img/banner/mk-groups-interior-design-bengaluru.png")` }}>
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-xl-8">
@@ -38,8 +38,8 @@ export default function Slider() {
                                         <span className="mk-hero-eyebrow" data-animation="fadeInUp" data-delay=".1s">
                                             BUILDERS &amp; DEVELOPERS
                                         </span>
-                                        <h2 className="title" data-animation="fadeInUp" data-delay=".2s">Building Dreams <br/> Creating Landmarks</h2>
-                                        <p data-animation="fadeInUp" data-delay=".4s">Turning dreams into remarkable spaces through visionary design, exceptional craftsmanship, and an enduring commitment to quality, trust, and excellence. We shape timeless landmarks that inspire lifestyles and generations to come.</p>
+                                        <h1 className="title" data-animation="fadeInUp" data-delay=".2s">Building Dreams <br/> Creating Landmarks</h1>
+                                        <p data-animation="fadeInUp" data-delay=".4s">MK Groups brings real estate, construction, interior design, and commercial property expertise to Bengaluru, creating enduring spaces for living, working, and investing.</p>
                                         <Link href="/realestate" className="btn" data-animation="fadeInUp" data-delay=".6s">
                                             <div className="btn_m">
                                                 <div className="btn_c">

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function About() {
     const highlights = [
@@ -30,9 +31,12 @@ export default function About() {
                 <div className="about-modern-layout">
                     <div className="about-modern-visual wow fadeInUp">
                         <figure className="about-modern-image">
-                            <img
-                                src="/assets/img/banner/coworking_space.png"
-                                alt="A bright, contemporary coworking space with a team collaborating"
+                            <Image
+                                src="/assets/img/banner/premium-coworking-space-bengaluru.png"
+                                alt="Team collaborating in a contemporary coworking space in Bengaluru"
+                                width={2752}
+                                height={1536}
+                                sizes="(max-width: 767px) 100vw, 45vw"
                             />
                         </figure>
                     </div>

@@ -12,7 +12,18 @@ export default function Home1() {
 
     return (
         <>
-            <Layout headerStyle={6} heroHeader>
+            <Layout
+                headerStyle={6}
+                heroHeader
+                headTitle="MK Groups | Real Estate, Construction & Coworking in Bengaluru"
+                seoDescription="Discover real estate, construction, interior design, commercial property, and premium coworking spaces in Bengaluru with MK Groups."
+                canonicalPath="/"
+                ogTitle="MK Groups | Spaces for Living, Working & Growing"
+                ogDescription="Explore Bengaluru real estate, construction and interior design services, alongside premium coworking and study spaces."
+                ogImage="/assets/img/banner/mk-groups-interior-design-bengaluru.png"
+                ogImageAlt="Contemporary commercial and coworking spaces by MK Groups in Bengaluru"
+                preloadImage="/assets/img/banner/mk-groups-interior-design-bengaluru.png"
+            >
                 <Slider />
                 <About />
                 <Newsletter />

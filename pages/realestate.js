@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import Layout from "@/components/layout/Layout"
 
 const services = [
@@ -74,20 +75,26 @@ const reasons = [
 const projects = [
     {
         image: "/assets/img/banner/h4_banner_img.jpg",
+        width: 1600,
+        height: 1080,
         alt: "Contemporary residential architecture with carefully detailed facade",
         title: "Residential Projects",
         type: "Places to call home",
         className: "mk-project-card-tall",
     },
     {
-        image: "/assets/img/banner/banner_img01_demo.jpg",
+        image: "/assets/img/banner/commercial-real-estate-services-bengaluru.jpg",
+        width: 1920,
+        height: 1080,
         alt: "Modern commercial building with a refined glass and stone exterior",
         title: "Commercial Spaces",
         type: "Built for business",
         className: "",
     },
     {
-        image: "/assets/img/banner/home_interior.png",
+        image: "/assets/img/banner/mk-groups-interior-design-bengaluru.png",
+        width: 2752,
+        height: 1536,
         alt: "Warm contemporary interior with natural materials and refined finishes",
         title: "Luxury Interiors",
         type: "Made personal",
@@ -95,6 +102,8 @@ const projects = [
     },
     {
         image: "/assets/img/banner/banner_right_img01.jpg",
+        width: 977,
+        height: 1080,
         alt: "Architectural detail inside a professionally designed meeting space",
         title: "Construction Excellence",
         type: "Crafted to last",
@@ -104,27 +113,40 @@ const projects = [
 
 export default function Services() {
     return (
-        <Layout headerStyle={6} headTitle="Real Estate, Construction & Interiors | MK Group" heroHeader>
+        <Layout
+            headerStyle={6}
+            headTitle="Real Estate & Construction Services in Bengaluru | MK Groups"
+            seoDescription="Explore residential and commercial property solutions, construction management, and interior design services in Bengaluru with MK Groups."
+            canonicalPath="/realestate"
+            ogTitle="Real Estate & Construction Services in Bengaluru"
+            ogDescription="Property guidance, construction management, and interior design for Bengaluru homes and businesses."
+            ogImage="/assets/img/banner/commercial-real-estate-services-bengaluru.jpg"
+            ogImageAlt="Modern commercial architecture representing MK Groups real estate services in Bengaluru"
+            heroHeader
+        >
             <div className="mk-services-page">
                 <section className="mk-services-hero">
-                    <img
+                    <Image
                         className="mk-services-hero-image"
-                        src="/assets/img/banner/banner_img01_demo.jpg"
-                        alt="Elegant contemporary commercial architecture with glass and natural stone"
+                        src="/assets/img/banner/commercial-real-estate-services-bengaluru.jpg"
+                        alt="Contemporary commercial architecture representing real estate and construction services in Bengaluru"
+                        width={1920}
+                        height={1080}
+                        sizes="100vw"
+                        priority
                     />
                     <div className="mk-services-hero-shade" aria-hidden="true" />
                     <div className="container">
                         <div className="mk-services-hero-content wow fadeInUp">
                             <span className="mk-services-eyebrow">
-                                Real Estate <i aria-hidden="true" /> Construction <i aria-hidden="true" /> Interiors
+                                Real Estate <i aria-hidden="true" /> Construction <i aria-hidden="true" /> Interiors · Bengaluru
                             </span>
-                            <h1>From Property to Possession</h1>
-                            <h2>We Manage Every Step.</h2>
+                            <h1>Real Estate in Bengaluru</h1>
+                            <h2>From Property to Possession</h2>
                             <p>
-                                Whether you’re purchasing property, planning construction, or designing your dream
-                                space, MK Groups provides end-to-end solutions that simplify the journey. From expert
-                                guidance and legal support to construction and interior execution, we help bring your
-                                vision to life with confidence and clarity.
+                                We manage every step, whether you’re purchasing residential or commercial property,
+                                planning construction, or designing your space. Get Bengaluru property guidance, legal
+                                support, construction management, and interior design with confidence and clarity.
                             </p>
                             <div className="mk-services-hero-actions">
                                 <Link className="mk-services-button" href="/contact">
@@ -223,7 +245,13 @@ export default function Services() {
                         <div className="mk-project-gallery">
                             {projects.map((project, index) => (
                                 <figure className={`mk-project-card ${project.className} wow fadeInUp`} data-wow-delay={`${index * 0.08}s`} key={project.title}>
-                                    <img src={project.image} alt={project.alt} loading="lazy" />
+                                    <Image
+                                        src={project.image}
+                                        alt={project.alt}
+                                        width={project.width}
+                                        height={project.height}
+                                        sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
+                                    />
                                     <figcaption>
                                         <span>{project.type}</span>
                                         <h3>{project.title}</h3>

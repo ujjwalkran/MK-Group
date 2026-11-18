@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import Layout from "@/components/layout/Layout"
 
 const highlights = [
@@ -60,29 +61,29 @@ const audiences = [
 
 const spaces = [
     {
-        image: "/assets/img/banner/coworking_space.png",
-        alt: "Bright collaborative coworking space with a shared table and city views",
+        image: "/assets/img/banner/premium-coworking-space-bengaluru.png",
+        alt: "Coworking collaboration lounge in Bengaluru with a shared table and city views",
         title: "Collaboration Lounge",
         type: "Connect & create",
         className: "mk-space-card-large",
     },
     {
-        image: "/assets/img/banner/coworking_space.png",
-        alt: "Team collaborating around a shared table in a bright coworking space",
+        image: "/assets/img/banner/premium-coworking-space-bengaluru.png",
+        alt: "Team collaborating in a shared workspace in Bengaluru",
         title: "Hot Desk Zone",
         type: "Find your flow",
         className: "",
     },
     {
-        image: "/assets/img/banner/home_interior.png",
-        alt: "Warm contemporary interior with a communal table and natural light",
+        image: "/assets/img/banner/mk-groups-interior-design-bengaluru.png",
+        alt: "Quiet study space in Bengaluru with a communal table and natural light",
         title: "Quiet Study Area",
         type: "Focus & learn",
         className: "",
     },
     {
-        image: "/assets/img/banner/home_interior.png",
-        alt: "Premium interior with a communal table and warm natural materials",
+        image: "/assets/img/banner/mk-groups-interior-design-bengaluru.png",
+        alt: "Professional meeting workspace in Bengaluru with warm natural materials",
         title: "Meeting Space",
         type: "Bring people together",
         className: "mk-space-card-wide",
@@ -100,7 +101,18 @@ const benefits = [
 
 export default function Coworking() {
     return (
-        <Layout headerStyle={6} headTitle="Coworking Spaces | MK Group" heroHeader lightHeroHeader>
+        <Layout
+            headerStyle={6}
+            headTitle="Coworking & Study Spaces in Bengaluru | MK Groups"
+            seoDescription="Find flexible coworking spaces, shared workspaces, and premium study areas in Bengaluru for professionals, startups, entrepreneurs, and students."
+            canonicalPath="/coworking"
+            ogTitle="Premium Coworking & Study Spaces in Bengaluru"
+            ogDescription="Explore flexible offices, shared workspaces, and quiet study spaces designed for focus and collaboration."
+            ogImage="/assets/img/banner/premium-coworking-space-bengaluru.png"
+            ogImageAlt="Bright coworking lounge and collaborative workspace in Bengaluru"
+            heroHeader
+            lightHeroHeader
+        >
             <div className="mk-coworking">
                 <section className="mk-coworking-hero">
                     <div className="container">
@@ -108,13 +120,13 @@ export default function Coworking() {
                             <div className="mk-coworking-hero-copy wow fadeInUp">
                                 <span className="mk-coworking-eyebrow">
                                     <span aria-hidden="true" />
-                                    Coworking Spaces
+                                    Work. Study. Connect. Grow.
                                 </span>
-                                <h1>Work. Study. Connect. <em>Grow.</em></h1>
+                                <h1>Coworking Spaces in <em>Bengaluru</em></h1>
                                 <p>
-                                    A modern, flexible environment designed for professionals, entrepreneurs,
-                                    students, and growing businesses. Thoughtfully designed workspaces, quiet study
-                                    zones, and collaborative areas support your productivity and growth.
+                                    Find a coworking space in Bengaluru with flexible shared workspace, quiet study
+                                    areas, and professional amenities for teams, entrepreneurs, remote professionals,
+                                    and students.
                                 </p>
                                 <div className="mk-coworking-hero-actions">
                                     <a className="mk-coworking-button" href="#membership">
@@ -135,9 +147,13 @@ export default function Coworking() {
                             </div>
 
                             <div className="mk-coworking-hero-visual wow fadeInUp" data-wow-delay=".15s">
-                                <img
-                                    src="/assets/img/banner/coworking_space.png"
-                                    alt="Premium coworking lounge with a sunlit shared table and collaborative team"
+                                <Image
+                                    src="/assets/img/banner/premium-coworking-space-bengaluru.png"
+                                    alt="Premium coworking lounge in Bengaluru with a sunlit shared table and collaborative seating"
+                                    width={2752}
+                                    height={1536}
+                                    sizes="(max-width: 767px) 100vw, 50vw"
+                                    priority
                                 />
                                 <div className="mk-coworking-visual-caption">
                                     <span className="mk-coworking-visual-mark" aria-hidden="true">
@@ -225,7 +241,13 @@ export default function Coworking() {
                         <div className="mk-coworking-gallery">
                             {spaces.map((space, index) => (
                                 <figure className={`mk-space-card ${space.className} wow fadeInUp`} data-wow-delay={`${index * 0.08}s`} key={space.title}>
-                                    <img src={space.image} alt={space.alt} loading="lazy" />
+                                    <Image
+                                        src={space.image}
+                                        alt={space.alt}
+                                        width={2752}
+                                        height={1536}
+                                        sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
+                                    />
                                     <figcaption>
                                         <span>{space.type}</span>
                                         <h3>{space.title}</h3>
