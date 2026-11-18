@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react"
 import LuxuryMenu from "./LuxuryMenu"
 import LuxuryMobileMenu from "./LuxuryMobileMenu"
 
-export default function Header6({ handleMobileMenu, closeMobileMenu, isMobileMenu = false, scroll }) {
+export default function Header6({ handleMobileMenu, closeMobileMenu, isMobileMenu = false, hasHeroBanner = false, hasLightHeroBanner = false, scroll }) {
     const menuToggleRef = useRef(null)
     const mobilePanelRef = useRef(null)
     const wasOpenRef = useRef(false)
@@ -47,7 +47,7 @@ export default function Header6({ handleMobileMenu, closeMobileMenu, isMobileMen
     }, [closeMenu, isMobileMenu])
 
     return (
-        <header className="header-style-five mk-luxury-header">
+        <header className={`header-style-five mk-luxury-header ${hasHeroBanner ? (hasLightHeroBanner ? "mk-light-hero-header" : "mk-hero-header") : "mk-inner-header"}`}>
             <div className={`menu-area transparent-header${scroll ? " sticky-menu" : ""}`}>
                 <div className="container custom-container">
                     <div className="menu-wrap">

@@ -100,7 +100,7 @@ const benefits = [
 
 export default function Coworking() {
     return (
-        <Layout headerStyle={6} headTitle="Coworking Spaces | MK Group">
+        <Layout headerStyle={6} headTitle="Coworking Spaces | MK Group" heroHeader lightHeroHeader>
             <div className="mk-coworking">
                 <section className="mk-coworking-hero">
                     <div className="container">

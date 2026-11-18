@@ -12,7 +12,7 @@ import Header7 from './Header7'
 import Header8 from './Header8'
 import PageHead from './PageHead'
 
-export default function Layout({ headerStyle, headTitle, breadcrumbTitle, children, noFooter }) {
+export default function Layout({ headerStyle, headTitle, breadcrumbTitle, children, noFooter, heroHeader = false, lightHeroHeader = false }) {
 
     useEffect(() => {
         const WOW = require('wowjs')
@@ -56,6 +56,8 @@ export default function Layout({ headerStyle, headTitle, breadcrumbTitle, childr
                     closeMobileMenu={closeMobileMenu}
                     handleMobileMenu={handleMobileMenu}
                     isMobileMenu={isMobileMenu}
+                    hasHeroBanner={heroHeader}
+                    hasLightHeroBanner={lightHeroHeader}
                     scroll={scroll}
                 />
             ) : null}

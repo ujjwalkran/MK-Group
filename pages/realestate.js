@@ -104,7 +104,7 @@ const projects = [
 
 export default function Services() {
     return (
-        <Layout headerStyle={6} headTitle="Real Estate, Construction & Interiors | MK Group">
+        <Layout headerStyle={6} headTitle="Real Estate, Construction & Interiors | MK Group" heroHeader>
             <div className="mk-services-page">
                 <section className="mk-services-hero">
                     <img

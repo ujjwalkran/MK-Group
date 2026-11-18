@@ -15,7 +15,7 @@ export default function Contact() {
     }
 
     return (
-        <Layout headerStyle={6}>
+        <Layout headerStyle={6} heroHeader lightHeroHeader>
             <section className="mk-contact-hero">
                 <div className="container">
                     <nav className="mk-contact-breadcrumb" aria-label="Breadcrumb">

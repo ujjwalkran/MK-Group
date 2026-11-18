@@ -12,7 +12,7 @@ export default function Home1() {
 
     return (
         <>
-            <Layout headerStyle={6}>
+            <Layout headerStyle={6} heroHeader>
                 <Slider />
                 <About />
                 <Newsletter />
