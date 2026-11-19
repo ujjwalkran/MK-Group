@@ -32,9 +32,14 @@ export default function Layout({
 
     useEffect(() => {
         const WOW = require('wowjs')
-        window.wow = new WOW.WOW({
-            live: false
-        })
+        WOW.WOW.prototype.resetAnimation = function (event) {
+            if (event.type.toLowerCase().indexOf('animationend') >= 0) {
+                // SVG animation events bubble; reset the element WOW attached its listener to.
+                const target = event.currentTarget || event.target || event.srcElement
+                target?.classList?.remove(this.config.animateClass)
+            }
+        }
+        window.wow = new WOW.WOW({ live: false })
         window.wow.init()
     }, [])
 
