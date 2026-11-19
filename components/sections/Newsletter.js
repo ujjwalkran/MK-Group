@@ -201,7 +201,10 @@ export default function Newsletter() {
                                             const inputType = field === "name" ? "text" : field === "phone" ? "tel" : "email"
                                             const autoComplete = field === "name" ? "name" : field === "phone" ? "tel" : "email"
                                             return (
-                                                <label className={`inquiry-field${errors[field] ? " inquiry-field-invalid" : ""}`} key={field}>
+                                                <label
+                                                    className={`inquiry-field${field === "email" ? " inquiry-field-wide" : ""}${errors[field] ? " inquiry-field-invalid" : ""}`}
+                                                    key={field}
+                                                >
                                                     <i
                                                         className={`fas ${field === "name" ? "fa-user" : field === "phone" ? "fa-phone" : "fa-envelope"}`}
                                                         aria-hidden="true"

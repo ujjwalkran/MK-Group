@@ -5529,6 +5529,14 @@ label {
         gap: 42px;
     }
 
+    .newsletter-inquiry .inquiry-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-inquiry .inquiry-field-wide {
+        grid-column: auto;
+    }
+
     .newsletter-inquiry .inquiry-copy h2 {
         max-width: 700px;
         font-size: clamp(42px, 7vw, 58px);
@@ -5565,14 +5573,6 @@ label {
     .newsletter-inquiry .inquiry-card {
         padding: 24px 18px;
         border-radius: 18px;
-    }
-
-    .newsletter-inquiry .inquiry-form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .newsletter-inquiry .inquiry-field-wide {
-        grid-column: auto;
     }
 
     .newsletter-inquiry .inquiry-card-success {
