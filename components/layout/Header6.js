@@ -54,16 +54,17 @@ export default function Header6({ handleMobileMenu, closeMobileMenu, isMobileMen
                     <div className="menu-wrap">
                         <nav className="menu-nav mk-header-nav" aria-label="Main navigation">
                             <div className="logo">
-                                <Link href="/" aria-label="MK Groups home">
+                                <Link href="/" aria-label="MK Groups home — Right Choice. Right Investment.">
                                     <Image
                                         src="/assets/img/logo/logo.png"
                                         alt="MK Groups"
-                                        width={4500}
-                                        height={4500}
-                                        sizes="(max-width: 1199px) 88px, 112px"
+                                        width={1615}
+                                        height={2254}
+                                        sizes="(max-width: 575px) 39px, (max-width: 1199px) 46px, 52px"
                                         priority
                                     />
                                 </Link>
+                                <span className="mk-header-tagline">Right Choice. Right Investment.</span>
                             </div>
                             <div className="navbar-wrap main-menu mk-desktop-nav">
                                 <LuxuryMenu />
@@ -108,14 +109,19 @@ export default function Header6({ handleMobileMenu, closeMobileMenu, isMobileMen
             >
                 <nav aria-label="Mobile menu" className="menu-box mk-mobile-panel">
                     <div className="mk-mobile-menu-header">
-                        <Link href="/" aria-label="MK Groups home" onClick={closeMenu}>
+                        <Link
+                            href="/"
+                            aria-label="MK Groups home — Right Choice. Right Investment."
+                            onClick={closeMenu}
+                        >
                             <Image
                                 src="/assets/img/logo/logo.png"
                                 alt="MK Groups"
-                                width={4500}
-                                height={4500}
-                                sizes="72px"
+                                width={1615}
+                                height={2254}
+                                sizes="40px"
                             />
+                            <span className="mk-header-tagline">Right Choice. Right Investment.</span>
                         </Link>
                         <button
                             aria-label="Close navigation menu"

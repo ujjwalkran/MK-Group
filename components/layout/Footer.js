@@ -15,14 +15,15 @@ export default function Footer() {
                 <div className="container">
                     <div className="mk-footer-grid">
                         <div className="mk-footer-brand">
-                            <Link href="/" className="mk-footer-logo">
+                            <Link href="/" className="mk-footer-logo" aria-label="MK Groups home — Right Choice. Right Investment.">
                                 <Image
                                     src="/assets/img/logo/logo.png"
                                     alt="MK Groups"
-                                    width={4500}
-                                    height={4500}
-                                    sizes="100px"
+                                    width={1615}
+                                    height={2254}
+                                    sizes="(max-width: 575px) 118px, 138px"
                                 />
+                                <span className="mk-header-tagline">Right Choice. Right Investment.</span>
                             </Link>
                             <p>
                                 Premium real estate and flexible workspaces, thoughtfully brought together to help
