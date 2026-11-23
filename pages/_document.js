@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html lang="en" id="top">
             <Head>
-                <link rel="icon" href="/assets/img/favicon.png" />
+                <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg?v=3" />
                 <link rel="preconnect" href="https://fonts.bunny.net" crossOrigin="anonymous" />
                 <link rel="dns-prefetch" href="https://fonts.bunny.net" />
                 <link
