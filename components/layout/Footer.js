@@ -43,7 +43,6 @@ export default function Footer() {
                                 <li><Link href="/#about">About us</Link></li>
                                 <li><Link href="/realestate">Real Estate</Link></li>
                                 <li><Link href="/coworking">Coworking</Link></li>
-                                <li><Link href="/project">Projects</Link></li>
                                 <li><Link href="/contact">Contact</Link></li>
                             </ul>
                         </nav>
